@@ -11,6 +11,7 @@
         }
     ],
     "require": {
+        "php" : ">5.5",
         "silex/silex": "^1.0",
         "michelf/php-markdown" : "^1.0"
     },
