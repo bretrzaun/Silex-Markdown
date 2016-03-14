@@ -6,6 +6,8 @@ Silex-Markdown
 A lightweight markdown service provider for Silex. Uses the
 [michelf/php-markdown](https://packagist.org/packages/michelf/php-markdown) markdown parser.
 
+Based on: [nicl/silex-markdown](https://github.com/nicl/Silex-Markdown)
+
 Installation
 ------------
 
