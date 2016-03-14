@@ -1,28 +1,32 @@
 {
-    "name": "nicl/silex-markdown",
-    "description": "Simple Silex wrapper for the Dragonfly markdown library",
+    "name": "bretrzaun/silex-markdown",
+    "description": "Simple Silex wrapper for markdown library",
     "keywords": ["markdown"],
-    "homepage": "http://github.com/nicl/silex-markdown",
+    "homepage": "http://github.com/bretrzaun/silex-markdown",
     "license": "MIT",
     "authors": [
         {
-            "name": "Nicolas Long",
-            "email": "nicolaslong@gmail.com"
+            "name": "Bret R. Zaun",
+            "email": "bretrzaun@hotmail.com"
         }
     ],
     "require": {
-        "silex/silex": "1.*",
-        "dflydev/markdown": "1.0.*"
+        "silex/silex": "^1.0",
+        "michelf/php-markdown" : "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.0",
+        "twig/twig": "^1.18"
     },
     "suggest": {
 	    "twig/twig": "enables parsing markdown right from the template using simple filter"
     },
     "autoload": {
-        "psr-0": { "Nicl": "src/" }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
+        "psr-4": {
+            "BretRZaun\\": "src/"
         }
+    },
+    "scripts" : {
+        "test" : "phpunit"
     }
 }
