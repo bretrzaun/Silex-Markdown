@@ -1,6 +1,8 @@
 Silex-Markdown
 ==============
 
+[![Build Status](https://travis-ci.org/bretrzaun/Silex-Markdown.svg?branch=master)](https://travis-ci.org/bretrzaun/Silex-Markdown)
+
 A lightweight markdown service provider for Silex. Uses the
 [michelf/php-markdown](https://packagist.org/packages/michelf/php-markdown) markdown parser.
 
