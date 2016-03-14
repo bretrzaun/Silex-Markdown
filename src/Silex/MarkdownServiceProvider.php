@@ -26,10 +26,8 @@ class MarkdownServiceProvider implements ServiceProviderInterface
             switch ($parser) {
                 case 'markdown':
                     return new \Michelf\Markdown;
-                    break;
                 case 'extra':
                     return new \Michelf\MarkdownExtra;
-                    break;
                 default:
                     throw new \RuntimeException("Unknown Markdown parser '$parser' specified");
             }

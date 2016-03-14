@@ -15,8 +15,6 @@ class MarkdownTwigExtension extends \Twig_Extension
      * Public constructor
      *
      * @param MarkdownInterface $parser
-     *
-     * @return MarkdownTwigExtension
      */
     public function __construct(MarkdownInterface $parser)
     {
