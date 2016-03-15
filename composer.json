@@ -1,6 +1,6 @@
 {
     "name": "bretrzaun/silex-markdown",
-    "description": "Simple Silex wrapper for markdown library",
+    "description": "A lightweight markdown service provider for Silex",
     "keywords": ["markdown"],
     "homepage": "http://github.com/bretrzaun/silex-markdown",
     "license": "MIT",
