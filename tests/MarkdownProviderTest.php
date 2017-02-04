@@ -2,6 +2,7 @@
 
 namespace BretRZaun\Silex\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
 use BretRZaun\Silex\MarkdownServiceProvider;
@@ -9,7 +10,7 @@ use BretRZaun\Silex\MarkdownServiceProvider;
 /**
  * Tests for markdown service provider
  */
-class MarkdownServiceProviderTest extends \PHPUnit_Framework_TestCase
+class MarkdownServiceProviderTest extends TestCase
 {
 
     /**
@@ -45,7 +46,7 @@ class MarkdownServiceProviderTest extends \PHPUnit_Framework_TestCase
      * @param bool   $expectException Should an exception be expected?
      * @param string $name            Name passed as the parser name
      *
-     * @dataProvider testBuiltInMarkdownParsersProvider
+     * @dataProvider builtInMarkdownParsersProvider
      */
     public function testBuiltInMarkdownParsers($expectedClass = null, $expectException = null, $name = null)
     {
@@ -75,7 +76,7 @@ class MarkdownServiceProviderTest extends \PHPUnit_Framework_TestCase
      *
      * @return array
      */
-    public function testBuiltInMarkdownParsersProvider()
+    public function builtInMarkdownParsersProvider()
     {
         return array(
             array(\Michelf\Markdown::class, false),
@@ -92,22 +93,14 @@ class MarkdownServiceProviderTest extends \PHPUnit_Framework_TestCase
     {
         $app = $this->app;
 
-        $markdownParser = $this->getMock('dflydev\markdown\IMarkdownParser');
+        $markdownParser = $this->createMock(\Michelf\Markdown::class);
 
-        $app['test.markdown.factory'] = $app->share(function($app) use ($markdownParser) {
+        $app['test.markdown.factory'] = function($app) use ($markdownParser) {
             return $markdownParser;
-        });
+        };
 
         $app['markdown.factory'] = 'test.markdown.factory';
 
         $this->assertEquals($markdownParser, $app['markdown']);
-    }
-
-    /**
-     * Test boot, 100% code coverage.
-     */
-    public function testBoot()
-    {
-        $this->app->boot();
     }
 }
