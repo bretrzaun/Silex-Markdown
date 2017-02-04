@@ -1,7 +1,7 @@
 Silex-Markdown
 ==============
 
-[![Build Status](https://travis-ci.org/bretrzaun/Silex-Markdown.svg?branch=master)](https://travis-ci.org/bretrzaun/Silex-Markdown)
+[![Build Status](https://travis-ci.org/bretrzaun/silex-markdown.svg?branch=master)](https://travis-ci.org/bretrzaun/silex-markdown)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bretrzaun/Silex-Markdown/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bretrzaun/Silex-Markdown/?branch=master)
 
 A lightweight markdown service provider for Silex. Uses the
